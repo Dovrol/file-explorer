@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkTreeStore" id="treeStore">
+    <columns>
+      <!-- column-name c1 -->
+      <column type="gchararray"/>
+      <!-- column-name c2 -->
+      <column type="gchararray"/>
+      <!-- column-name c3 -->
+      <column type="gchararray"/>
+      <!-- column-name cpixbuf -->
+      <column type="GdkPixbuf"/>
+      <!-- column-name c4 -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkWindow" id="window">
+    <property name="can_focus">False</property>
+    <property name="border_width">1</property>
+    <property name="resizable">False</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="fixed1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkScrolledWindow" id="view1">
+            <property name="width_request">800</property>
+            <property name="height_request">500</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="margin_bottom">40</property>
+            <property name="hscrollbar_policy">external</property>
+            <property name="window_placement_set">False</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkTreeView" id="tv1">
+                <property name="width_request">100</property>
+                <property name="height_request">80</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="model">treeStore</property>
+                <property name="rules_hint">True</property>
+                <property name="enable_grid_lines">both</property>
+                <property name="enable_tree_lines">True</property>
+                <signal name="row-expanded" handler="on_tv1_row_expanded" swapped="no"/>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection" id="select">
+                    <signal name="changed" handler="on_select_changed" swapped="no"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="cx1">
+                    <property name="resizable">True</property>
+                    <property name="spacing">10</property>
+                    <property name="min_width">250</property>
+                    <property name="title" translatable="yes">Name</property>
+                    <child>
+                      <object class="GtkCellRendererPixbuf" id="pixbuf"/>
+                    </child>
+                    <child>
+                      <object class="GtkCellRendererText" id="cr1"/>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="cx2">
+                    <property name="resizable">True</property>
+                    <property name="min_width">100</property>
+                    <property name="title" translatable="yes">Kind</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="cr2"/>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="cx4">
+                    <property name="min_width">150</property>
+                    <property name="title" translatable="yes">Size</property>
+                    <property name="alignment">0.89999997615814209</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="cr4"/>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="cx3">
+                    <property name="title" translatable="yes">Last Modified</property>
+                    <property name="alignment">0.89999997615814209</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="cr3"/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">10</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="pathDisplayer">
+            <property name="width_request">800</property>
+            <property name="height_request">30</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="halign">start</property>
+            <property name="margin_top">10</property>
+            <property name="label" translatable="yes">label</property>
+            <property name="single_line_mode">True</property>
+            <property name="xalign">0</property>
+            <attributes>
+              <attribute name="font-desc" value="Courier 14"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">510</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
