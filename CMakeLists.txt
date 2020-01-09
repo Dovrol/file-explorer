@@ -23,3 +23,5 @@ ADD_EXECUTABLE(Eksplorator ${SOURCES})
 
 # Link the target to the GTK+ libraries
 TARGET_LINK_LIBRARIES(Eksplorator ${GTK3_LIBRARIES})
+
+
