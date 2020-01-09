@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
 
 	// Setting window made in Glade
 
-	builder = gtk_builder_new_from_file("/Users/wiktorkubis/Desktop/Eksplorator/tree.glade");
+	builder = gtk_builder_new_from_file("tree.glade");
 	window = GTK_WIDGET(gtk_builder_get_object(builder, "window"));
 	g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 	gtk_builder_connect_signals(builder, NULL);
