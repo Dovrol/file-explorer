@@ -1,6 +1,8 @@
 # File explorer
 File explorer written in C using Gtk library
 
+![img](ss.png)
+
 ## INSTALL
 - Requirements - GTK+-3.0 library
 
